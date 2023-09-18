@@ -1,7 +1,6 @@
-import About from "@/components/About";
-import Navbar from "@/components/Navbar";
-import PostList from "@/components/PostList";
-import Image from "next/image";
+import Navbar from "../components/Navbar";
+import About from "../components/About";
+import PostList from "../components/PostList";
 
 export default function Home() {
   return (
