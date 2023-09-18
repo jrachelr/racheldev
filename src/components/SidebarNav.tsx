@@ -1,14 +1,11 @@
 import Link from "next/link";
 
-export default function Navbar() {
+export default function SidebarNav() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex justify-between h-16">
         <div className="flex justify-between items-center w-full">
           <ul className="flex">
-            <li>
-              <h1 className="text-2xl font-medium">Rachel</h1>
-            </li>
             <Link href="/aboutme">
               <h1 className="text-2xl font-medium">
                 <span className="text-teal-500">About</span>
