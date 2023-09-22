@@ -3,7 +3,7 @@ import NavLink from "./NavLink";
 export default function SidebarNav() {
   const links = [
     { label: "about", link: "/" },
-    { label: "blog", link: "/blog" },
+    { label: "blog", link: "/posts" },
     { label: "projects", link: "/projects" },
   ];
 
