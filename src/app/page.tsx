@@ -1,14 +1,11 @@
-import SidebarNav from "../components/SidebarNav";
-
-import Header from "../components/Header";
-
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-no-comment-textnodes */
 export default function Home() {
   return (
     <>
-      <Header />
-      <SidebarNav />
-
-      <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+      <div>
+        <p>Hi, I'm Rachel</p>
+      </div>
     </>
   );
 }

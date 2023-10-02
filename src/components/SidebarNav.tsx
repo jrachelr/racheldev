@@ -1,24 +1,23 @@
 import NavLink from "./NavLink";
 
-const links = [
-  { label: "about", link: "/about" },
-  { label: "blog", link: "/posts" },
-  { label: "projects", link: "/projects" },
-];
-
 export default function SidebarNav() {
+  const links = [
+    { label: "about", link: "/about" },
+    { label: "blog", link: "/posts" },
+    { label: "projects", link: "/projects" },
+  ];
+
   return (
-    <nav>
-      <div className="w-2/5">
+    <div className="w-1/5 h-full">
+      <nav>
         <ul className="p-8">
           <li className="text-2xl font-medium flex flex-col">
             {links.map((link) => (
-              // eslint-disable-next-line react/jsx-key
-              <NavLink link={link} />
+              <NavLink key={link.label} link={link} />
             ))}
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }
