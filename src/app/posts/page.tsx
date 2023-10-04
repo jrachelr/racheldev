@@ -1,5 +1,17 @@
-import PostList from "../../components/PostLIst";
+import React from "react";
+import PostList from "../../components/PostList";
 
-import { getAllPosts } from "../../lib/api";
+type Props = {
+  allPosts: PostType[];
+};
 
-export default function Page() {}
+export default function PostListPage({ allPosts }: Props) {
+  return (
+    <section>
+      <h3>Blog</h3>
+      <div>
+        <PostList posts={allPosts} />
+      </div>
+    </section>
+  );
+}

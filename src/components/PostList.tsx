@@ -1,5 +1,5 @@
 import PostPreview from "./PostPreview";
-import { PostType } from "../lib/PostType";
+import React from "react";
 
 type Props = {
   posts: PostType[];
@@ -7,18 +7,16 @@ type Props = {
 
 export default function PostList({ posts }: Props) {
   return (
-    <section>
-      <div>
-        {posts.map((post) => (
-          <PostPreview
-            key={post.slug}
-            title={post.title}
-            date={post.date}
-            subtitle={post.subtitle}
-            slug={post.slug}
-          />
-        ))}
-      </div>
-    </section>
+    <div>
+      {posts.map((post) => (
+        <PostPreview
+          key={post.slug}
+          title={post.title}
+          date={post.date}
+          subtitle={post.subtitle}
+          slug={post.slug}
+        />
+      ))}
+    </div>
   );
 }
