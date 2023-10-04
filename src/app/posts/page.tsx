@@ -10,7 +10,7 @@ export default function PostListPage({ allPosts }: Props) {
     <section>
       <h3>Blog</h3>
       <div>
-        <PostList posts={allPosts} />
+        <PostList allPosts={allPosts} />
       </div>
     </section>
   );
