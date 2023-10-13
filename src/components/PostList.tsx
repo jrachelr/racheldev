@@ -2,11 +2,12 @@ import PostPreview from "./PostPreview";
 import { getAllPosts } from "../lib/api";
 import React from "react";
 
-type Props = {
-  allPosts: PostType[];
-};
+// type Props = {
+//   allPosts: PostType[];
+// };
 
-export default function PostList({ allPosts }: Props) {
+export default function PostList() {
+  const allPosts = getAllPosts(["title", "date", "slug", "subtitle"]);
   return (
     <div>
       {allPosts.map((post) => (
@@ -21,11 +22,11 @@ export default function PostList({ allPosts }: Props) {
     </div>
   );
 }
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts(["title", "date", "slug", "subtitle"]);
-  console.log(getAllPosts());
-  return {
-    props: { allPosts },
-  };
-};
-getStaticProps();
+// export const getStaticProps = async () => {
+//   const allPosts = getAllPosts(["title", "date", "slug", "subtitle"]);
+//   console.log(getAllPosts());
+//   return {
+//     props: { allPosts },
+//   };
+// };
+// getStaticProps();
